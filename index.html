@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agile Task</title>
+    <script src="main.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h2>Products Payment Calculator</h2>
+<br>
+
+<div class="container">
+    <form id="agileForm">
+        <div class="form-group row">
+            <div class="col-xs-4">
+                <label for="pricePerItems">Price Per Item: </label>
+                <input name="pricePerItems" type="number" id="pricePerItems" min="1"
+                       class="form-control form-control-sm">
+            </div>
+            &nbsp
+            <div class="col-xs-4">
+                <label for="noOfItems">No. of Items: </label>
+                <input name="noOfItems" type="number" id="noOfItems" min="1" class="form-control form-control-sm">
+            </div>
+            &nbsp
+        </div>
+        <div class="form-group row">
+            <button type="button" onclick="begin()" class="btn btn-primary">Add</button>
+            &nbsp
+            <button type="button" onclick="calcSummary()" class="btn btn-danger">Total Bill</button>
+            &nbsp
+        </div>
+        &nbsp
+    </form>
+</div>
+<br>
+<div class="container">
+    <table id="agileTable" class="table">
+        <tr>
+            <th>Price Per Item &nbsp</th>
+            <th>No of Items &nbsp</th>
+            <th>Product Total &nbsp</th>
+        </tr>
+    </table>
+</div>
+<br>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <div class="row">
+                <h5 class="card-title">Products Summary</h5>
+            </div>
+            <div class="row">
+                <h6>Total Amount: </h6> &nbsp
+                <h6 id="totalPrice">0.00</h6>
+            </div>
+            <div class="row">
+                <h6>Discount Amount: </h6> &nbsp
+                <h6 id="discount">0.00</h6>
+            </div>
+            <div class="row">
+                <h6>Tax Amount: </h6> &nbsp
+                <h6 id="taxAmount">0.00</h6>
+            </div>
+            <div class="row">
+                <h6>Net Amount: </h6> &nbsp
+                <h6 id="netTotal">0.00</h6>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
